@@ -5,7 +5,8 @@ export default function TopBar() {
     <div className="w-full bg-[#1F3C88] text-white text-xs md:text-sm">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 px-4 py-2">
         <p className="text-center md:text-left">
-          Actualmente solo aceptamos <span className="font-semibold">3 clínicas nuevas</span> al mes.
+          Actualmente solo aceptamos{" "}
+          <span className="font-semibold">3 clínicas nuevas</span> al mes.
         </p>
 
         <a
