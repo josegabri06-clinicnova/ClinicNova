@@ -3,12 +3,9 @@ export default function SectionDivider() {
     <div
       className="
         w-full
-        h-10
+        h-10           /* altura del espacio entre secciones */
         md:h-16
-        bg-gradient-to-b
-        from-transparent
-        via-[#f3f5ff]
-        to-white
+        bg-white       /* sin degradado, fondo limpio */
       "
     />
   );
