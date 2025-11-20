@@ -11,75 +11,47 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header
-      className="
-        w-full
-        bg-transparent              /* móvil: sin franja fea */
-        md:bg-white/80              /* desktop: barra blanca suave */
-        md:backdrop-blur-sm
-        md:border-b md:border-gray-100
-      "
-    >
-      <div
-        className="
-          max-w-6xl
-          mx-auto
-          flex
-          items-center
-          justify-center           /* móvil: centrado */
-          md:justify-between       /* desktop: separado */
-          px-4
-          py-3
-        "
-      >
-        {/* LOGO COMO TEXTO */}
-        <Link
-          href="/"
-          className="
-            font-bold
-            text-2xl
-            text-[#1F3C88]
-            text-center
-            md:text-left
-          "
-        >
+    // 👇 OCULTAMOS EL NAVBAR EN MÓVIL, SOLO SE VE EN MD+
+    <header className="hidden md:block w-full bg-white/90 backdrop-blur-sm border-b border-gray-100">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+        {/* LOGO TEXTO */}
+        <Link href="/" className="font-bold text-xl text-[#1F3C88]">
           ClinicNova
         </Link>
 
-        {/* MENÚ + CTA (solo escritorio) */}
-        <div className="hidden md:flex items-center gap-8">
-          <nav className="flex items-center gap-6 text-sm text-[#1F3C88]">
-            {navLinks.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="hover:text-[#122457] transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+        {/* MENÚ */}
+        <nav className="flex items-center gap-6 text-sm text-[#1F3C88]">
+          {navLinks.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="hover:text-[#122457] transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
 
-          <a
-            href="#contacto"
-            className="
-              bg-[#1F3C88]
-              text-white
-              px-6
-              py-2.5
-              rounded-full
-              text-sm
-              font-medium
-              shadow-md
-              hover:shadow-lg
-              hover:scale-[1.03]
-              transition-all
-              duration-200
-            "
-          >
-            Optimizar mi clínica
-          </a>
-        </div>
+        {/* CTA */}
+        <Link
+          href="#contacto"
+          className="
+            bg-[#1F3C88]
+            text-white
+            px-6
+            py-2.5
+            rounded-full
+            text-sm
+            font-medium
+            shadow-md
+            hover:shadow-lg
+            hover:scale-[1.03]
+            transition-all
+            duration-200
+          "
+        >
+          Optimizar mi clínica
+        </Link>
       </div>
     </header>
   );

@@ -59,6 +59,10 @@ export default function Hero() {
 
       {/* CONTENIDO HERO */}
       <div className="relative max-w-4xl mx-auto px-4 pt-24 pb-20 text-center">
+
+        <p className="md:hidden font-semibold text-lg text-[#1F3C88] mb-3">
+  ClinicNova
+</p>
         {/* TÍTULO CON GLOW SUAVE */}
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
@@ -102,6 +106,9 @@ export default function Hero() {
             Ver cómo funciona
           </a>
         </motion.div>
+        <div className="nav-bg">
+  {/* Hero contenido */}
+</div>
 
         {/* NOTA */}
         <motion.p
