@@ -11,10 +11,38 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-white/80 backdrop-blur-sm border-b border-gray-100">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <header
+      className="
+        w-full
+        bg-transparent              /* móvil: sin franja fea */
+        md:bg-white/80              /* desktop: barra blanca suave */
+        md:backdrop-blur-sm
+        md:border-b md:border-gray-100
+      "
+    >
+      <div
+        className="
+          max-w-6xl
+          mx-auto
+          flex
+          items-center
+          justify-center           /* móvil: centrado */
+          md:justify-between       /* desktop: separado */
+          px-4
+          py-3
+        "
+      >
         {/* LOGO COMO TEXTO */}
-        <Link href="/" className="font-bold text-2xl text-[#1F3C88]">
+        <Link
+          href="/"
+          className="
+            font-bold
+            text-2xl
+            text-[#1F3C88]
+            text-center
+            md:text-left
+          "
+        >
           ClinicNova
         </Link>
 
@@ -34,7 +62,20 @@ export default function Navbar() {
 
           <a
             href="#contacto"
-            className="bg-[#1F3C88] text-white px-6 py-2.5 rounded-full text-sm font-medium shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-200"
+            className="
+              bg-[#1F3C88]
+              text-white
+              px-6
+              py-2.5
+              rounded-full
+              text-sm
+              font-medium
+              shadow-md
+              hover:shadow-lg
+              hover:scale-[1.03]
+              transition-all
+              duration-200
+            "
           >
             Optimizar mi clínica
           </a>
