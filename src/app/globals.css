@@ -20,7 +20,10 @@
 }
 
 body {
-  background: var(--background);
+  background: #ffffff;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bg {
+  background: linear-gradient(180deg, #DCE8FF 0%, #F3F8FF 40%, white 100%);
 }
